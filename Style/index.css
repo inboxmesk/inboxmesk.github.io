@@ -2,12 +2,17 @@ body, html {
     height: 100%;
     margin: 0;
 }
-ul {
+
+.home{
+    
+}
+.link, ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: white;
+     
 
 }
 
@@ -16,14 +21,29 @@ li {
     text-decoration: none;
 
 }
+@media screen and (max-width: 600px) {
+  li{
+    float: right;
+  }
+  body{
+    margin: 1%;
+  }
+}
 
-li a {
+@media screen and (max-width: 991px) {
+  .link img{
+        
+        height: 55px;
+  }
+}
+
+.link a {
     display: block;
     color: black;
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px 18px;
     text-decoration: none;
-
+    font-family:OstrichSansLight;
 }
 
 li a:hover:not(.active) {
@@ -48,17 +68,18 @@ li a:hover:not(.active) {
 .parallaxHome h2{
     text-align: center;
     color: black;
-    padding-right: 25%;
-    padding-left: 25%;
-    padding-top: 15%;
-    font-weight: bolder;
+    font-size: 2.4vw;
+    padding-top: 16%;
+    padding-left: 6%;
+    padding-right: 6%;
+    
 }
 .parallaxHome h1{
     text-align: center;
-    font-family: Monospaced;
-    font-weight: bolder;
+    font-size: 5vw;
+   font-weight: bolder;
     color: black;
-    font-size: 64px;
+    
 }
 #aboutSection{
     width: 100%;
@@ -69,15 +90,19 @@ li a:hover:not(.active) {
     width: 100%;
 }
 #aboutColBg{
-    margin-left: 10%;
-    margin-right: 0%;
+    margin-left: 7%;
+    margin-right: 3%;
 }
+
 #aboutColBg h1{
     font-family: monospace;
     margin-top: 4%;
+    text-align: justify;
 }
 #aboutColBg p{
     font-family: monospace;
+    text-align: justify;
+
 }
 #aboutColBg a{
     font-family: monospace;
@@ -106,28 +131,27 @@ li a:hover:not(.active) {
     font-size: 48px;
 }
 #serviceRow{
-    margin-right: 1%;
-    margin-left: 1%;
+    margin: 3%;
     text-align: center;
 }
 #myInput{
     border: none;
     color: white;
 }
-#footer{
-    background-color: black;
-    color: white;
-    height: 170px;
+.panel-heading{
     text-align: center;
-}
-#footer p{
-    padding-top: 50px;
-    padding-left: 4%;
     font-size: small;
+    margin: auto;
+   
+}
+.panel-body{
+    float: right;
+    font-size: smaller;
+    margin: auto;
 }
 
 .flip-card {
-    background-color: transparent;
+    background: background:linear-gradient(135deg, #e5e7eb 0%,#c8ccd3 100%);
     width: 220px;
     height: 300px;
     perspective: 1000px;
@@ -155,14 +179,22 @@ li a:hover:not(.active) {
 }
 
 .flip-card-front {
-    background-color: #bbb;
+    background:linear-gradient(135deg, #e5e7eb 0%,#c8ccd3 100%);
     color: black;
     z-index: 2;
+    -webkit-transform: rotateY(0deg);
 }
 
 .flip-card-back {
-    background-color: rgb(255,179,82);
-    color: white;
+    background:linear-gradient(135deg, #e5e7eb 0%,#c8ccd3 100%);
+    color: black;
     transform: rotateY(180deg);
+    -webkit-transform: rotateY(-180deg);
     z-index: 1;
+}
+#contactSection{
+    width: 100%;
+}
+#contactSectionCol{
+    margin-top: 3%;
 }
