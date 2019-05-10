@@ -1,55 +1,19 @@
 body, html {
     height: 100%;
-    margin: 0;
-}
-
-.home{
-    
-}
-.link, ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: white;
-     
-
-}
-
-li {
-    float: left;
-    text-decoration: none;
-
+    margin: 0%;
+    scroll-behavior: smooth;
 }
 @media screen and (max-width: 600px) {
-  li{
-    float: right;
-  }
   body{
     margin: 1%;
   }
 }
 
-@media screen and (max-width: 991px) {
-  .link img{
-        
-        height: 55px;
+@media screen and (max-width: 600px) {
+  .row{
+    border: none;
   }
 }
-
-.link a {
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 16px 18px;
-    text-decoration: none;
-    font-family:OstrichSansLight;
-}
-
-li a:hover:not(.active) {
-    text-decoration: none;
-}
-
 .parallaxHome {
     /* The image used */
     background-image: url("cover.gif");
@@ -58,28 +22,38 @@ li a:hover:not(.active) {
     height: 100%;
 
     /* Create the parallax scrolling effect */
+    
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 1;
     filter: alpha(opacity=50);
+
 }
-.parallaxHome h2{
-    text-align: center;
-    color: black;
-    font-size: 2.4vw;
-    padding-top: 16%;
-    padding-left: 6%;
-    padding-right: 6%;
-    
+@media screen and (max-width: 600px) {
+  .parallaxHome{
+    height: 90%;
+  }
 }
-.parallaxHome h1{
+#homeSection{
     text-align: center;
-    font-size: 5vw;
-   font-weight: bolder;
-    color: black;
-    
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    top: 50%;
+    left: 50%;
+    color: white;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+@media screen and (max-width: 600px) {
+  #homeSection{
+    height: 82%;
+  }
 }
 #aboutSection{
     width: 100%;
@@ -90,18 +64,19 @@ li a:hover:not(.active) {
     width: 100%;
 }
 #aboutColBg{
-    margin-left: 7%;
-    margin-right: 3%;
+    margin-left: 17%;
+    margin-right: 7%;
 }
 
 #aboutColBg h1{
-    font-family: monospace;
+    font-family: Ostrich Sans-black;
     margin-top: 4%;
-    text-align: justify;
+    text-align: left;
+    font-weight: bold;
 }
 #aboutColBg p{
     font-family: monospace;
-    text-align: justify;
+    text-align:left;
 
 }
 #aboutColBg a{
@@ -119,19 +94,20 @@ li a:hover:not(.active) {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.5;
-    filter: alpha(opacity=50);
+    opacity: 0.7;
+    filter: alpha(opacity=70);
 }
 .parallaxAbout h1{
     text-align: center;
     padding-top: 3%;
-    margin: 0%;
+    margin: 1%;
     color: black;
     font-weight: bolder;
-    font-size: 48px;
+    font-size: 40px;
 }
 #serviceRow{
-    margin: 3%;
+    margin: auto;
+    padding: 5%;
     text-align: center;
 }
 #myInput{
@@ -140,61 +116,61 @@ li a:hover:not(.active) {
 }
 .panel-heading{
     text-align: center;
+    font-family: monospace;
     font-size: small;
+    font-weight: bolder;
     margin: auto;
+    padding-top: 1px;
    
 }
-.panel-body{
-    float: right;
-    font-size: smaller;
-    margin: auto;
-}
 
-.flip-card {
-    background: background:linear-gradient(135deg, #e5e7eb 0%,#c8ccd3 100%);
-    width: 220px;
-    height: 300px;
-    perspective: 1000px;
-}
-
-.flip-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-}
-
-.flip-card-front {
-    background:linear-gradient(135deg, #e5e7eb 0%,#c8ccd3 100%);
-    color: black;
-    z-index: 2;
-    -webkit-transform: rotateY(0deg);
-}
-
-.flip-card-back {
-    background:linear-gradient(135deg, #e5e7eb 0%,#c8ccd3 100%);
-    color: black;
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(-180deg);
-    z-index: 1;
-}
 #contactSection{
     width: 100%;
 }
 #contactSectionCol{
     margin-top: 3%;
+}
+#serviceRow{
+    width: 100%;
+}
+
+.nav-link{
+    font-family: Ostrich Sans-regular;
+    color: black;
+    font-size: x-large;
+}
+@media screen and (max-width: 600px) {
+  .nav-link{
+   font-size: xx-large;
+  }
+}
+#homeSection p{
+    font-family: Ostrich Sans-black;
+    color: white;
+    font-style: italic;
+    float: right;
+    margin: 10px;
+}
+#homeSection h1{
+    font-family: Ostrich Sans-bold;
+    padding-top: 18%;
+    font-size: 6.5vw;
+}
+#gmail{
+    font-family: Ostrich Sans-regular;
+    color: white;
+}
+.power{
+    font-family: Ostrich Sans-black;font-size: smaller;font-weight: bolder;margin-left: 80%;margin-right: 10%;
+}
+@media screen and (max-width: 600px) {
+  .power{
+    text-align: center;
+    margin-left: 0%;margin-right: 0%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .containerr{
+    height: 70px;
+  }
 }
